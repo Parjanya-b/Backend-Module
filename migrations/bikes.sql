@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS Bikes;
+
+USE Bikes;
+
+CREATE TABLE IF NOT EXISTS bikes_info (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    engine VARCHAR(100),
+    price INT NOT NULL,
+    company VARCHAR(100)
+);
