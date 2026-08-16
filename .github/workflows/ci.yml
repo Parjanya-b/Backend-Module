@@ -24,8 +24,10 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run tests
-        run: npm run test
+      - name: Fix Permissions and Run Tests
+        run: |
+          chmod -R +x node_modules/.bin
+          npm run test
 
       - name: Build Successful
         run: echo "Build Successful"
